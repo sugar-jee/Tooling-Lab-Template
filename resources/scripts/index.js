@@ -1,3 +1,4 @@
+import { RockPaperScissors } from "./rock_paper_scissors";
 // Elements
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.getElementById(`game-screen`);
@@ -14,7 +15,7 @@ let game;
 let username;
 
 // hide gamescreen
-gameScreen.classList.add(`d-none`);
+gameScreen.classLisst.add(`d-none`);
 resetGameButton.classList.add(`d-none`);
 
 // updateScoreTallyUI
