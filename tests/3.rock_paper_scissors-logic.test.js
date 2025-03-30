@@ -7,12 +7,14 @@ describe(`RockPaperScissors class`, function () {
     test(`win cases`, function () {
       const game = new RockPaperScissors();
       expect(game.determineWinner(`rock`, `scissors`)).toBe(`win`);
-      expect(determineWinner('paper', 'rock')).toBe('win');
-      expect(determineWinner('scissors', 'paper')).toBe('win');
+      expect(game.determineWinner('paper', 'rock')).toBe('win');
+      expect(game.determineWinner('scissors', 'paper')).toBe('win');
     });
 
     test(`tie cases`, function () {
-      // Write your test here
+      expect(game.determineWinner(`rock`, `rock`)).toBe(`tie`);
+      expect(game.determineWinner('paper', 'paper')).toBe('tie');
+      expect(game.determineWinner('scissors', 'scissors')).toBe('tie');
     });
 
     test(`lost cases`, function () {
