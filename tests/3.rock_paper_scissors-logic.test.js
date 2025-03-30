@@ -35,11 +35,15 @@ describe(`generateCPUResponse()`, function () {
   });
 
   it(`Math.Random = 0.5 -> Paper`, function() {
-    // Write your test here
+    mathRandomSpy.mockImplementation(() => 0.5);
+    const game = new RockPaperScissors();
+    expect(game.generateCPUResponse()).toBe(`paper`);
   });
 
   it(`Math.Random = 0.9 -> Paper`, function() {
-    // Write your test here
+    mathRandomSpy.mockImplementation(() => 0.9);
+    const game = new RockPaperScissors();
+    expect(game.generateCPUResponse()).toBe(`paper`);
   });
 
 });
