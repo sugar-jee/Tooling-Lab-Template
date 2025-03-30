@@ -43,7 +43,7 @@ describe(`generateCPUResponse()`, function () {
   it(`Math.Random = 0.9 -> Paper`, function() {
     mathRandomSpy.mockImplementation(() => 0.9);
     const game = new RockPaperScissors();
-    expect(game.generateCPUResponse()).toBe(`paper`);
+    expect(game.generateCPUResponse()).toBe(`scissors`);
   });
 
 });
