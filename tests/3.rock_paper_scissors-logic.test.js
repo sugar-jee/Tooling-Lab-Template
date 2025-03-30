@@ -1,11 +1,14 @@
 const { RockPaperScissors } = require(`../resources/scripts/rock_paper_scissors.js`);
+const mathRandomSpy = jest.spyOn(Math, `random`);
 
 describe(`RockPaperScissors class`, function () {
   describe(`determineWinner()`, function () {
+
     test(`win cases`, function () {
       const game = new RockPaperScissors();
       expect(game.determineWinner(`rock`, `scissors`)).toBe(`win`);
-      // Complete the test
+      expect(determineWinner('paper', 'rock')).toBe('win');
+      expect(determineWinner('scissors', 'paper')).toBe('win');
     });
 
     test(`tie cases`, function () {
