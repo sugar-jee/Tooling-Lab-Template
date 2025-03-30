@@ -7,6 +7,7 @@ export default defineConfig([
   { files: [ `**/*.{js,mjs,cjs}` ], languageOptions: { globals: globals.browser } },
   { files: [ `**/*.{js,mjs,cjs}` ], plugins: { js }, extends: [ `js/recommended` ] },
   { files: [ `**/*.{js,mjs,cjs}` ], 
+    env: { jest: true},
     rules: {
       "array-bracket-spacing": [ 2, `always` ],
       "no-const-assign": 2,
