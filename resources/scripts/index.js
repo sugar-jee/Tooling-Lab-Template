@@ -25,21 +25,21 @@ function updateScoreTallyUI(){
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
-      gameHistoryParagraph.innerHTML = ''; 
-    gameHistoryParagraph.innerHTML = game.gameHistoryLog; 
+  gameHistoryParagraph.innerHTML = ``; 
+  gameHistoryParagraph.innerHTML = game.gameHistoryLog; 
 }
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function (e) {
   e.preventDefault(); 
-     username = userName.value;
+  username = userName.value;
   game = new RockPaperScissors(username);
 
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
-     resetGameButton.classList.remove(`d-none`);
+  resetGameButton.classList.remove(`d-none`);
   updateScoreTallyUI();
-     updateGameHistoryUI();
+  updateGameHistoryUI();
   // Complete
 });
 
@@ -54,13 +54,13 @@ goButton.addEventListener(`click`, function (e) {
 });
 
 //reset-game-button
-resetGameButton.addEventListener('click', function(e) { 
-     e.preventDefault();
-  userName.value = '';
-     username = '';
+resetGameButton.addEventListener(`click`, function(e) { 
+  e.preventDefault();
+  userName.value = ``;
+  username = ``;
   game = new RockPaperScissors(username);
 
   welcomeScreen.classList.remove(`d-none`);
-     gameScreen.classList.add(`d-none`);
+  gameScreen.classList.add(`d-none`);
   resetGameButton.classList.add(`d-none`);
 })
